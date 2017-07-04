@@ -10,14 +10,18 @@ android {
     buildToolsVersion "26.0.0"
 
     defaultConfig {
-        applicationId "com.ddiehl.deskclock"
+        applicationId "com.android.deskclock"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
     }
+
     buildTypes {
+        debug {
+            applicationIdSuffix ".mod"
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
