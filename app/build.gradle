@@ -23,6 +23,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets.main {
+        java.srcDirs += "../aosp/src"
+        res.srcDirs += "../aosp/res"
+        assets.srcDirs += "../aosp/assets"
+        manifest.srcFile "../aosp/AndroidManifest.xml"
+    }
 }
 
 def support_library_version = "26.0.0-beta2"
